@@ -185,7 +185,7 @@ class RandomLayout(Layout):
 
 
 
-def main(script, n='10', *args):
+def main(script, n='11', *args):
 
     # create n Vertices
     n = int(n)
@@ -194,7 +194,8 @@ def main(script, n='10', *args):
 
     # create a graph and a layout
     g = Graph(vs)
-    g.add_all_edges()
+    #g.add_all_edges()
+    g.regularize(4)
     layout = CircleLayout(g)
 
     # draw the graph

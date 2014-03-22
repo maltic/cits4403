@@ -12,10 +12,9 @@ def bisect(elems, key):
             l = mid+1
     return None
 
-def main(script, *args):
+def main():
     print bisect([i for i in range(50)], 49)
 
 
 if __name__ == '__main__':
-    import sys
-    main(*sys.argv)
+    main()

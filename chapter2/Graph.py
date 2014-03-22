@@ -10,6 +10,9 @@ Distributed under the GNU General Public License at gnu.org/licenses/gpl.html.
 
 from sets import Set
 from collections import deque
+from Queue import PriorityQueue
+import string
+
 
 class Vertex(object):
     """A Vertex is a node in a graph."""
@@ -121,21 +124,83 @@ class Graph(dict):
                     q.append(c)
         return len(Set(self.keys()) - Set(visited)) == 0
 
+    def regularize(self, k):
+        verts = self.vertices()
+        n = len(verts)
+        if k > n-1:
+            return False
+        elif k % 2 == 1 and n % 2 == 1:
+            return False
+        elif k % 2 == 0:
+            # k even, n ambivalent
+            for i in range(1, k/2 + 1):
+                for v in range(n):
+                    self.add_edge(Edge(verts[v], verts[ (v+i) % n ]))
+        else:
+            # k odd, n even
+            for i in range(1, n/2):
+                for v in range(n):
+                    self.add_edge(Edge(verts[v], verts[ (v+i) % n ]))
+            for v in range(n/2):
+                self.add_edge(Edge(verts[v], verts[ (v + n/2) % n ]))
+
+    def dijkstra(self, start):
+        q = PriorityQueue()
+        visited = Set()
+        dist = {}
+        parent = {}
+        q.put((0, (None, start)))
+        while not q.empty():
+            nd, (p, n) = q.get()
+            if n in visited:
+                continue
+            parent[n] = p
+            dist[n] = nd
+            visited.add(n)
+            for child in self.out_verticies(n):
+                if not child in visited:
+                    d = nd + 1
+                    q.put((d, (n, child)))
+        return (dist, parent)
+
+    def floyd_warshall(self):
+
+        dist = {}
+        for v in self.vertices():
+            for w in self.vertices():
+                if not v in dist:
+                    dist[v] = {}
+                if v == w:
+                    dist[v][w] = 0
+                elif w in self[v]:
+                    dist[v][w] = 1
+                else:
+                    dist[v][w] = sys.maxint
+
+        for i in self.vertices():
+            for j in self.vertices():
+                for k in self.vertices():
+                    if not (k in dist[i]) or not (k in dist[j]):
+                        continue
+                    if dist[i][k] + dist[k][j] < dist[i][j]:
+                        dist[i][j] = dist[i][k] + dist[k][j]
+
+        return dist
+
 
 
 
 def main(script, *args):
-    v = Vertex('v')
-    print v
-    w = Vertex('w')
-    c = Vertex('c')
-    print w
-    e = Edge(v, w)
-    print e
-    g = Graph([v,w,c], [e])
+    n = 8
+    labels = string.ascii_lowercase + string.ascii_uppercase
+    vs = [Vertex(c) for c in labels[:n]]
+
+    g = Graph(vs)
+    g.regularize(2)
     print g
     print "..."
-    print g.is_connected()
+    print g.dijkstra(vs[0])
+    print g.floyd_warshall()
 
 
 if __name__ == '__main__':
