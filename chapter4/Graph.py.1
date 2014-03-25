@@ -1,0 +1,142 @@
+""" Code example from Complexity and Computation, a book about
+exploring complexity science with Python.  Available free from
+
+http://greenteapress.com/complexity
+
+Copyright 2011 Allen B. Downey.
+Distributed under the GNU General Public License at gnu.org/licenses/gpl.html.
+"""
+
+class Vertex(object):
+    """A Vertex is a node in a graph."""
+
+    # cache is a dictionary that maps from labels to Vertex object
+    cache = {}
+
+    def __new__(cls, label):
+        """if a Vertex with (label) already exists, return
+        a reference to it; otherwise create a new one (and store
+        a reference in the cache).
+        """
+        try:
+            return Vertex.cache[label]
+        except KeyError:
+            v = object.__new__(cls)
+            Vertex.cache[label] = v
+            return v
+
+    def __init__(self, label=''):
+        self.label = label
+
+    def __repr__(self):
+        """Returns a string representation of this object that can
+        be evaluated as a Python expression."""
+        return 'Vertex(%s)' % repr(self.label)
+
+    __str__ = __repr__
+    """The str and repr forms of this object are the same."""
+
+
+class Edge(tuple):
+    """An Edge is a list of two vertices."""
+
+    def __new__(cls, e1, e2):
+        """The Edge constructor takes two vertices."""
+        return tuple.__new__(cls, (e1, e2))
+
+    def __repr__(self):
+        """Return a string representation of this object that can
+        be evaluated as a Python expression."""
+        return 'Edge(%s, %s)' % (repr(self[0]), repr(self[1]))
+
+    __str__ = __repr__
+    """The str and repr forms of this object are the same."""
+
+
+class Graph(dict):
+    """A Graph is a dictionary of dictionaries.  The outer
+    dictionary maps from a vertex to an inner dictionary.
+    The inner dictionary maps from other vertices to edges.
+    
+    For vertices a and b, graph[a][b] maps
+    to the edge that connects a->b, if it exists."""
+
+    def __init__(self, vs=[], es=[]):
+        """Creates a new graph.  
+        vs: list of vertices;
+        es: list of edges.
+        """
+        for v in vs:
+            self.add_vertex(v)
+            
+        for e in es:
+            self.add_edge(e)
+
+    def __str__(self):
+        return dict.__str__(self)
+
+    def __repr__(self):
+        return 'Graph(%s, %s)' % (repr(self.vertices()), 
+                                  repr(self.edges()))
+
+    def add_vertex(self, v):
+        """Add a vertex to the graph."""
+        self[v] = {}
+
+    def add_edge(self, e):
+        """Adds an edge to the graph by adding an entry in both directions.
+
+        If there is already an edge connecting these Vertices, the
+        new edge replaces it.
+        """
+        v, w = e
+        self[v][w] = e
+        self[w][v] = e
+
+    def remove_edge(self, e):
+        """Removes (e) from the graph."""
+        v, w = e
+        del self[v][w]
+        del self[w][v]
+
+    def get_edge(self, v, w):
+        """Returns the edge (v, w) if it exists, None otherwise.
+
+        has_edge is a synonym for get_edge"""
+        try:
+            return self[v][w]
+        except KeyError:
+            return None
+
+    has_edge = get_edge
+
+    def vertices(self):
+        """Returns a list of vertices in this graph."""
+        return self.keys()
+
+    def edges(self):
+        """Returns a set of the edges in this graph."""
+        s = set()
+        for d in self.itervalues():
+            s.update(d.itervalues())
+        return s
+
+    def out_vertices(self, v):
+        """Returns a list of vertices that can be reached in one hop from v."""
+        return self[v].keys()
+
+    def out_edges(self, v):
+        """Returns the list of edges out of v."""
+        return self[v].values()
+
+    def add_all_edges(self):
+        """Makes a complete graph by adding edges between all
+        pairs of vertices."""
+        vs = self.vertices()
+        for i, v in enumerate(vs):
+            for j, w in enumerate(vs):
+                if j == i: break
+                self.add_edge(Edge(v, w))
+                
+    def add_regular_edges(self, k=2):
+        """Make
