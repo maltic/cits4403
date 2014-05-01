@@ -67,7 +67,7 @@ class Life(object):
         for line in f:
             nums = line.split(" ")
             x, y = int(nums[0]), int(nums[1])
-            self.array[(x + self.n) % self.n, (y + self.n) % self.n]
+            self.array[(x + self.n) % self.n, (y + self.n) % self.n] = 1
 
 class Turmite(object):
     def __init__(self, x, y, direc = 0):
