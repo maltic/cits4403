@@ -1,6 +1,10 @@
 import sys
 import fileio
 
+import Pmf
+import Cdf
+import Zipf
+
 class Midi(object):
     def __init__(self, fname):
         self.bytes = []
@@ -16,8 +20,17 @@ class Midi(object):
 
 def main(name, fname, *args):
     #m = Midi(fname)
-    print fileio.read_midifile(fname)
-
+    pattern = fileio.read_midifile(fname)
+    notes = []
+    for track in pattern:
+        for event in track:
+            if event.name == "Note On":
+                notes.append(event.data[0])
+    pairs = []
+    for i in range(len(notes)-1):
+        pairs.append((notes[i], notes[i+1]))
+    hist = Pmf.MakeHistFromList(pairs)
+    Zipf.plot_ranks(hist, 'log')
 
 if __name__ == '__main__':
     main(*sys.argv)
