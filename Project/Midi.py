@@ -28,7 +28,7 @@ class Midi(object):
                 byte = f.read(1)
                 if byte == "":
                     break
-                self.bytes.append(ord(byte)
+                self.bytes.append(ord(byte))
         self.check_header()
         self.file_format = self.bytes[9]
         self.tracks = concatBits(self.bytes[10],  self.bytes[11])
@@ -61,6 +61,35 @@ class Midi(object):
         self.index += noBytes
 
 
+def plot(events):
+    hist = Pmf.MakeHistFromList(events)
+    Zipf.plot_ranks(hist, 'log')
+
+
+def note_analysis(midipattern, n=2):
+    notes = []
+    for track in midipattern:
+        for event in track:
+            if event.name == "Note On" and event.data[1] > 0:
+                notes.append(event.data[0])
+    grouped = []
+    for i in range(len(notes)-n+1):
+        grouped.append(tuple([notes[i+j] for j in range(n)]))
+
+    return grouped
+
+def notevelocity_analysis(midipattern, n=1):
+    notes = []
+    for track in midipattern:
+        for event in track:
+            if event.name == "Note On" and event.data[1] > 0:
+                notes.append(tuple(event.data))
+    grouped = []
+    for i in range(len(notes)-n+1):
+        grouped.append(tuple([notes[i+j] for j in range(n)]))
+
+    return grouped
+
 
 
 
@@ -68,16 +97,9 @@ def main(name, fname, *args):
 
     m = Midi(fname)
     pattern = fileio.read_midifile(fname)
-    notes = []
-    for track in pattern:
-        for event in track:
-            if event.name == "Note On":
-                notes.append(event.data[0])
-    pairs = []
-    for i in range(len(notes)-1):
-        pairs.append((notes[i], notes[i+1]))
-    hist = Pmf.MakeHistFromList(pairs)
-    Zipf.plot_ranks(hist, 'log')
+    events = note_analysis(pattern)
+    plot(events)
+
 
 if __name__ == '__main__':
     main(*sys.argv)
