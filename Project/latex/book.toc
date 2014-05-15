@@ -1,0 +1,108 @@
+\contentsline {chapter}{Preface}{v}
+\contentsline {section}{\numberline {0.1}Why I wrote this book}{v}
+\contentsline {section}{\numberline {0.2}Suggestions for teachers}{v}
+\contentsline {section}{\numberline {0.3}Suggestions for autodidacts}{vi}
+\contentsline {chapter}{\numberline {1}Complexity Science}{1}
+\contentsline {section}{\numberline {1.1}What is this book about?}{1}
+\contentsline {section}{\numberline {1.2}A new kind of science}{2}
+\contentsline {section}{\numberline {1.3}Paradigm shift?}{3}
+\contentsline {section}{\numberline {1.4}The axes of scientific models}{4}
+\contentsline {section}{\numberline {1.5}A new kind of model}{5}
+\contentsline {section}{\numberline {1.6}A new kind of engineering}{6}
+\contentsline {section}{\numberline {1.7}A new kind of thinking}{7}
+\contentsline {chapter}{\numberline {2}Graphs}{9}
+\contentsline {section}{\numberline {2.1}What's a graph?}{9}
+\contentsline {section}{\numberline {2.2}Representing graphs}{12}
+\contentsline {section}{\numberline {2.3}Random graphs}{15}
+\contentsline {section}{\numberline {2.4}Connected graphs}{15}
+\contentsline {section}{\numberline {2.5}Paul Erd\H {o}s: peripatetic mathematician, speed freak}{16}
+\contentsline {section}{\numberline {2.6}Iterators}{16}
+\contentsline {section}{\numberline {2.7}Generators}{18}
+\contentsline {chapter}{\numberline {3}Analysis of algorithms}{19}
+\contentsline {section}{\numberline {3.1}Order of growth}{20}
+\contentsline {section}{\numberline {3.2}Analysis of basic Python operations}{22}
+\contentsline {section}{\numberline {3.3}Analysis of search algorithms}{23}
+\contentsline {section}{\numberline {3.4}Hashtables}{24}
+\contentsline {section}{\numberline {3.5}Summing lists}{29}
+\contentsline {section}{\numberline {3.6}{\tt pyplot}}{31}
+\contentsline {section}{\numberline {3.7}List comprehensions}{32}
+\contentsline {chapter}{\numberline {4}Small world graphs}{33}
+\contentsline {section}{\numberline {4.1}Analysis of graph algorithms}{33}
+\contentsline {section}{\numberline {4.2}FIFO implementation}{34}
+\contentsline {section}{\numberline {4.3}Stanley Milgram}{35}
+\contentsline {section}{\numberline {4.4}Watts and Strogatz}{35}
+\contentsline {section}{\numberline {4.5}Dijkstra}{37}
+\contentsline {section}{\numberline {4.6}What kind of explanation is {\em that}?}{38}
+\contentsline {chapter}{\numberline {5}Scale-free networks}{41}
+\contentsline {section}{\numberline {5.1}Zipf's Law}{41}
+\contentsline {section}{\numberline {5.2}Cumulative distributions}{42}
+\contentsline {section}{\numberline {5.3}Continuous distributions}{44}
+\contentsline {section}{\numberline {5.4}Pareto distributions}{44}
+\contentsline {section}{\numberline {5.5}Barab\'{a}si\nobreakspace {}and Albert}{46}
+\contentsline {section}{\numberline {5.6}Zipf, Pareto and power laws}{47}
+\contentsline {section}{\numberline {5.7}Explanatory models}{49}
+\contentsline {chapter}{\numberline {6}Cellular Automata}{51}
+\contentsline {section}{\numberline {6.1}Stephen Wolfram}{51}
+\contentsline {section}{\numberline {6.2}Implementing CAs}{53}
+\contentsline {section}{\numberline {6.3}CADrawer}{54}
+\contentsline {section}{\numberline {6.4}Classifying CAs}{56}
+\contentsline {section}{\numberline {6.5}Randomness}{56}
+\contentsline {section}{\numberline {6.6}Determinism}{58}
+\contentsline {section}{\numberline {6.7}Structures}{59}
+\contentsline {section}{\numberline {6.8}Universality}{61}
+\contentsline {section}{\numberline {6.9}Falsifiability}{62}
+\contentsline {section}{\numberline {6.10}What is this a model of?}{64}
+\contentsline {chapter}{\numberline {7}Game of Life}{67}
+\contentsline {section}{\numberline {7.1}Implementing Life}{68}
+\contentsline {section}{\numberline {7.2}Life patterns}{70}
+\contentsline {section}{\numberline {7.3}Conway's conjecture}{71}
+\contentsline {section}{\numberline {7.4}Realism}{71}
+\contentsline {section}{\numberline {7.5}Instrumentalism}{72}
+\contentsline {section}{\numberline {7.6}Turmites}{73}
+\contentsline {chapter}{\numberline {8}Fractals}{75}
+\contentsline {section}{\numberline {8.1}Fractal CAs}{76}
+\contentsline {section}{\numberline {8.2}Percolation}{78}
+\contentsline {chapter}{\numberline {9}Self-organized criticality}{81}
+\contentsline {section}{\numberline {9.1}Sand piles}{81}
+\contentsline {section}{\numberline {9.2}Spectral density}{82}
+\contentsline {section}{\numberline {9.3}Fast Fourier Transform}{84}
+\contentsline {section}{\numberline {9.4}Pink noise}{85}
+\contentsline {section}{\numberline {9.5}Reductionism and Holism}{86}
+\contentsline {section}{\numberline {9.6}SOC, causation and prediction}{89}
+\contentsline {chapter}{\numberline {10}Agent-based models}{91}
+\contentsline {section}{\numberline {10.1}Thomas Schelling}{91}
+\contentsline {section}{\numberline {10.2}Agent-based models}{92}
+\contentsline {section}{\numberline {10.3}Traffic jams}{93}
+\contentsline {section}{\numberline {10.4}Boids}{93}
+\contentsline {section}{\numberline {10.5}Prisoner's Dilemma}{95}
+\contentsline {section}{\numberline {10.6}Emergence}{97}
+\contentsline {section}{\numberline {10.7}Free will}{98}
+\contentsline {chapter}{\numberline {11}Case study: Sugarscape}{101}
+\contentsline {section}{\numberline {11.1}The Original Sugarscape}{101}
+\contentsline {section}{\numberline {11.2}The Occupy movement}{101}
+\contentsline {section}{\numberline {11.3}A New Take on Sugarscape}{102}
+\contentsline {subsection}{\numberline {11.3.1}Pygame}{102}
+\contentsline {section}{\numberline {11.4}Taxation and the Leave Behind}{103}
+\contentsline {section}{\numberline {11.5}The Gini coefficient}{103}
+\contentsline {section}{\numberline {11.6}Results With Taxation}{104}
+\contentsline {section}{\numberline {11.7}Conclusion}{104}
+\contentsline {chapter}{\numberline {12}Case study: Ant trails}{109}
+\contentsline {section}{\numberline {12.1}Introduction}{109}
+\contentsline {section}{\numberline {12.2}Model Overview}{109}
+\contentsline {section}{\numberline {12.3}API design}{111}
+\contentsline {section}{\numberline {12.4}Sparse matrices}{112}
+\contentsline {section}{\numberline {12.5}wx}{112}
+\contentsline {section}{\numberline {12.6}Applications}{113}
+\contentsline {chapter}{\numberline {13}Case study: Directed graphs and knots}{115}
+\contentsline {section}{\numberline {13.1}Directed Graphs}{115}
+\contentsline {section}{\numberline {13.2}Implementation}{116}
+\contentsline {section}{\numberline {13.3}Detecting knots}{116}
+\contentsline {section}{\numberline {13.4}Knots in Wikipedia}{118}
+\contentsline {chapter}{\numberline {14}Case study: The Volunteer's Dilemma}{119}
+\contentsline {section}{\numberline {14.1}The prairie dog's dilemma}{119}
+\contentsline {section}{\numberline {14.2}Analysis}{120}
+\contentsline {section}{\numberline {14.3}The Norms Game}{121}
+\contentsline {section}{\numberline {14.4}Results}{122}
+\contentsline {section}{\numberline {14.5}Improving the chances}{123}
+\contentsline {chapter}{\numberline {A}Call for submissions}{125}
+\contentsline {chapter}{\numberline {B}Reading list}{127}
