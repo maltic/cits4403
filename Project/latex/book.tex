@@ -84,24 +84,31 @@
 
 \section{Music as Language}
 
-Sugarscape is an agent-based model developed by Joshua M. Epstein and
-Robert Axtell to investigate the economics of wealth distribution.
-They presented the original model in their book,
-{\it Growing Artificial Societies}.
+Zipf's law was introduced in Chapter 5. To recapitulate, it posits that the frequency of a word is inversely proportional to its rank. The rank of a word being defined as its index in a frequency table. The canonical example of this is the words of long piece of literature, usually a novel. It is a classical example of a scale-free distribution, and is defined by $f = r^{-a}$ where $f$ is frequency and $r$ is rank. A frequency distribution is said to be Zipfian if $a \approx 1$. Because of this, when plotted on a log-log scale (equivalent to taking the log of both sides), a Zipfian distribution appears to be a line with slope $m \approx -1$. Though Zipf's law is typically described in terms of novels, and thus written language, it actually refers to any natural language. Natural language is generally regarded to be any non-contrived language---which is to say that its use and invention is unpremeditated. Clearly most written and spoken languages are natural languages, however, written and performed music is also a type of natural language.
 
-The sugarscape is a virtual 2D grid where each cell has a certain
-amount of abstract wealth, called sugar.  Agents roam the grid
-and accumulate sugar.
+Music, among other art forms, is often regarded as communication. Like other forms of human communication it has structure and rules. While I shall not give a formal definition of these, the reader may refer to \url{http://en.wikipedia.org/wiki/Music_theory} for a concise overview. This chapter investigates Zipf's law in music. This is done using the MIDI file type, which is a relatively simple and widely used way to encode music digitally.
 
-\subsection{Pink Noise}
 
-In the simplest Sugarscape, each agent has a sugar reserve, a
-metabolism at which rate it consumes its sugar, and a range of nearby
-cells that it can observe.  At each time step, the agent observes its
-nearby cells and moves to the cell with the most sugar. These rules
-can be expanded to include topics as varied as reproduction, death,
-disease, loans, and warfare. For example, a disease can be introduced
-to the system where a sick agent can infect nearby healthy agents.
+\begin{exercise}
+
+There are specific parts of the human brain involved in language. For example, damage to Broca's area can profoundly affect ones ability to understand spoken and written language. Does an analogous region exist for processing music? (Hint: try searching for `Amusia'.)
+
+\end{exercise}
+
+\section{The MIDI Format}
+
+The MIDI file format comprises a header and a series of one or more tracks. Ever MIDI track also contains a header, which is followed by a sequence of events. There are many event types which refer to any time related possibility. However, the only two which we consider in this investigation are the `Note On' and `Note Off' events. A Note On event has a time, a velocity, and a note. The time is when it is played, the velocity is the force with which it is played, and the note is the specific sound frequency of the event. It should be noted that velocity is not volume. It is possible than a MIDI instrument could have a linear velocity-volume relationship, but it could be exponential, logarithmic, or anything else. There are 128 distinct notes in the MIDI format, these are analogous to an extended piano (which has only 88 keys), with each increment indicating a semitone increase in sound frequency.
+
+Figure of a piano keyboard here.
+
+Parsing the MIDI file format can be difficult, as such, it is often relegated to a library. Python does not come with an easy to install midi parsing library. However, an open source effort called \texttt{python-midi} is available on Github under the MIT licence. It can be found here \url{https://github.com/vishnubob/python-midi}. Download or clone the repository and use the source files in your project. Once they are in the same folder, you should be able to import them like any Python library.
+
+\begin{exercise}
+
+Research the MIDI format. How hard you think it would be to write your own parser? Remember, if you improve \texttt{python-midi}, submit a pull request to Github!
+
+\end{exercise}
+
 
 Despite its simplicity, the model generates outcomes that resemble the
 real world. When modeling wealth with Sugarscape, a long-tailed
