@@ -86,6 +86,8 @@
 
 Zipf's law was introduced in Chapter 5. To recapitulate, it posits that the frequency of a word is inversely proportional to its rank. The rank of a word being defined as its index in a frequency table. The canonical example of this is the words of long piece of literature, usually a novel. It is a classical example of a scale-free distribution, and is defined by $f = r^{-a}$ where $f$ is frequency and $r$ is rank. A frequency distribution is said to be Zipfian if $a \approx 1$. Because of this, when plotted on a log-log scale (equivalent to taking the log of both sides), a Zipfian distribution appears to be a line with slope $m \approx -1$. Though Zipf's law is typically described in terms of novels, and thus written language, it actually refers to any natural language. Natural language is generally regarded to be any non-contrived language---which is to say that its use and invention is unpremeditated. Clearly most written and spoken languages are natural languages, however, written and performed music is also a type of natural language.
 
+Figure of a log log zipf graph here
+
 Music, among other art forms, is often regarded as communication. Like other forms of human communication it has structure and rules. While I shall not give a formal definition of these, the reader may refer to \url{http://en.wikipedia.org/wiki/Music_theory} for a concise overview. This chapter investigates Zipf's law in music. This is done using the MIDI file type, which is a relatively simple and widely used way to encode music digitally.
 
 
@@ -101,44 +103,77 @@ The MIDI file format comprises a header and a series of one or more tracks. Ever
 
 Figure of a piano keyboard here.
 
-Parsing the MIDI file format can be difficult, as such, it is often relegated to a library. Python does not come with an easy to install midi parsing library. However, an open source effort called \texttt{python-midi} is available on Github under the MIT licence. It can be found here \url{https://github.com/vishnubob/python-midi}. Download or clone the repository and use the source files in your project. Once they are in the same folder, you should be able to import them like any Python library.
+Parsing the MIDI file format can be difficult, as such, it is often relegated to a library. Python does not come with an easy to install MIDI parsing library. However, an open source effort called \texttt{python-midi} is available on Github under the MIT licence. It can be found here \url{https://github.com/vishnubob/python-midi}. Download or clone the repository and use the source files in your project. Once they are in the same folder, you should be able to import them like any Python library. I have provided a basic example that loads a MIDI file, given a file name from the command line. The \texttt{fileio} module is part of \texttt{python-midi}. It contains functions related to reading and parsing MIDI files.
+
+
+\begin{verbatim}
+import sys
+import fileio
+
+
+def main(name, fname, *args):
+    pattern = fileio.read_midifile(fname)
+    print pattern
+
+
+if __name__ == '__main__':
+    main(*sys.argv)
+
+\end{verbatim}
+
+
+The way MIDI patterns are represented in \texttt{python-midi} is straightforward. A pattern is a list of tracks. A track is a list of events. Every event has a type, and associated meta-data. All of these classes also have the \texttt{\_\_repr\_\_} method overloaded. This makes it easy to determine what information is available. A quirk of some older MIDI files is that a Note On event with velocity 0 is equivalent to the corresponding Note Off event. Keep this in mind when experimenting with MIDI files.
+
+The Classical Archive has some excellent MIDI encodings of classical music (available at \url{http://www.classicalarchives.com/midi.html}). You may wish to find some songs which you enjoy, many people have made their MIDI versions of songs freely available on the Internet. There is also software that allows the user to write MIDI music using a graphic environment. If you are so inclined, it is possible to analyse your own compositions.
+
 
 \begin{exercise}
+Research the MIDI format. How hard do you think it would be to write your own parser? Remember, if you improve \texttt{python-midi}, submit a pull request to Github!
+\end{exercise}
 
-Research the MIDI format. How hard you think it would be to write your own parser? Remember, if you improve \texttt{python-midi}, submit a pull request to Github!
-
+\begin{exercise}
+Attempt to write a script that outputs the number of distinct notes in a MIDI file. My solution is available at URL.
 \end{exercise}
 
 
-Despite its simplicity, the model generates outcomes that resemble the
-real world. When modeling wealth with Sugarscape, a long-tailed
-distribution appears where some agents are vastly richer than others.
-Similar behavior is seen in most real economies, where a small part of
-the population holds a large fraction of the wealth.  Extreme wealth
-inequality is generally considered a problem, because it means there
-are many people barely surviving while others are fabulously rich.
-
-\section{MIDI files}
-
-Wealth inequality has partly fueled a modern social movement known as
-the Occupy movement.  The first significant Occupy protest was on Wall
-Street in New York City, where thousands of protesters gathered to
-express their dismay with the distribution of wealth, among other
-things. The movement's motto is ``We are the 99\%'', reminding
-politicians to serve the majority, not the 1\% who control more than a
-third of the nation's wealth. A major goal of the movement is to
-achieve a more equal distribution of income, which protesters hope to
-accomplish by implementing a more progressive tax policy.
-
-One of the effects of taxation is to redistribute wealth
-from the rich to the poor.  But opponents of the Occupy movement (and
-many fiscal conservatives) claim that high tax rates for the
-rich actually hurt the population as a whole.  The logic is that
-wealthy people employ the poor, redistributing the wealth without the
-need for tax levies.
-
-
 \section{Words and Music}
+
+Zipf's law refers to the frequency of words found in a large corpus of natural language. It is hard to see how the concept of a word could apply to musical compositions. Of course, any interpretation of a word in music is necessarily arbitrary and somewhat open to interpretation. Despite this, I shall now describe several feasible candidates. Clearly the most obviously irreducible component of a musical composition is the note. Building upon this starting point, one might analyse the velocities, lengths, or the spacing between similar notes. More complex interpretations may attempt to group notes into structures like chords or melodies. I shall, however, start with a much simpler interpretation.
+
+\subsection{Note Groupings}
+As I have said, we can break a piece of music up into notes. If we define a word as a single note, we can then collect the frequencies of these notes, and thence subject them to Zipfian analysis. This necessitates going through every MIDI event in every MIDI track for any given pattern. The \texttt{python-midi} package makes this quite easy, as tracks and events are represented as objects that inherit from \texttt{list}. Here is a simple function that returns all the notes (in no particular order) given the path to a MIDI file.
+
+\begin{verbatim}
+def get_notes(fname):
+    pattern = fileio.read_midifile(fname)
+    notes = []
+    for track in pattern:
+        for event in track:
+            if event.name == "Note On" and event.data[1] > 0:
+                notes.append(event.data[0])
+    return notes
+\end{verbatim}
+
+The first line reads and parses the MIDI into a pattern. The follow two loops examine every event in the pattern. Every time a genuine Note On event is spotted (remember that a Note On event with velocity 0 is actually a Note Off event) it is added to the \texttt{notes} list. It should be pointed out that event data is stored in the \texttt{event.data} member. For Note On events, index zero is the MIDI note, and index one is the velocity. After executing this function, we now have everything we need to create a CDF... etc
+
+
+
+Going to explain all the different `words'
+
+exercises will be the implement as many types as possible
+
+remind to sort by ticks
+
+
+\section{Scale-free Music}
+
+This is the results section
+
+show some log log plots
+
+show some correlations
+
+ask the reader to implement their own stuff
 
 Our implementation of Sugarscape aims to study the effect of taxation
 on the wealth of a society. We want to show how extreme under- or
@@ -151,76 +186,16 @@ the end goal of determining whether it is possible to shrink the wealth gap
 without crippling the society.
 
 
-\subsection{Pygame}
 
-In the process of implementing Sugarscape, we made a GUI to better
-understand what was happening on the grid. The visualization of the
-Sugarscape is done with Pygame, a set of Python modules that allows
-easy graphic drawing. Pygame can blit images onto the screen (see
-\url{http://en.wikipedia.org/wiki/Bit_blit}) and it has built-in
-methods for handling user input like mouse clicks and button presses,
-making it ideal for designing games or other programs that receive a
-lot of input.
-
-Below is an abbreviated version of our event loop that draws the cells
-in the GUI at each time step.  {\tt Sugarscape.nextstep} moves every agent
-forward by one time step and the rest of the code redraws the
-update. Redrawing the entire grid is slightly less efficient than
-changing existing rectangle objects but is a common convention for
-pygame. A square is drawn for each location, and the color of the
-square changes based on the amount of sugar contained there. Agents
-are represented by circles drawn on top of their current location.
-
-\begin{verbatim}
-
-def event_loop(self,sugarscape):
-   while True:
-      sugarscape.nextstep()
-      for i in range(sugarscape.length):
-          for j in range(sugarscape.width):
-              loc = sugarscape.get_location(i,j)
-              health_color = (0, 0, loc.get_sugar_amt()/loc.get_max_sugar())
-              pygame.draw.rect(self.window, healthColor,(12*i,12*j,10,10))
-      pygame.display.update()
-\end{verbatim}
-
-Users can control certain attributes of the Sugarscape by moving
-sliders underneath the grid. A histogram, implemented using the
-matplotlib library, shows the current distribution of wealth, and text
-fields show certain characteristics of the distribution.
-
-
-\section{Scale-free Music}
-
-Taxation in our implementation of Sugarscape is handled with a
-Government object. Every ten time steps, the Government object
-collects a fraction of each agent's sugar reserve, then distributes
-the collected sugar to each agent equally.  This transfer represents
-services provided by the government as well as explicit redistribution
-of wealth.
-
-But if opponents of the Occupy movement are correct, transferring
-wealth from rich to poor makes society as a whole less productive.
-According to this theory, the rich create more wealth
-than the poor because they can open factories, fund
-research, and generally make investments into the
-economy.
-
-In order to simulate this effect, we need to augment the model with
-a mechanism of wealth creation.  We
-implement a simple ``leave behind'' feature, where agents leave some
-sugar behind as they leave a location:
-
-\[ leave\_behind = \frac{1}{5} 
-           \left( \frac{wealth\times N}{total\_wealth} \right)^{1.1} \]
-
-where $N$ is the total number of agents, $wealth$ is the amount of sugar
-the agent has, and $total\_wealth$ is the total sugar
-owned by all the agents.  Agents who own a large proportion of the
-total wealth leave behind larger amounts of sugar, making an
-investment into the Sugarscape, and increasing the total wealth.
 
 \section{Zipf's Law and Beauty}
+
+Talk about how Zipf's law may be a precondition for beautiful music
+
+reference that paper that used it as a fitness function
+
+Talk about how pink noise is nicer than brown/white
+Ask the reader to listen to all the kinds of noise
 
 \begin{figure}[ht]
 \centerline{\includegraphics[width=3.0in]{figs/towers}}
@@ -249,6 +224,10 @@ middle class.
 
 
 \section{Reductionism or Holism?}
+
+Written English and Music both share Zipfian properties. A holist would say that Zipf's law is an underlying property of natural languages. What would a reductionist say? Remember that we have reduce language and music alike down too words. This is much the same way a physicist might modle suns and planets like point masses. Can we use this property to make predictions about other natural languages. What would an instrumentalist say? How about a realist?
+
+The construction hypothesis; language and music have these properties because they are constructed.
 
 \begin{figure}[ht]
 \centerline{\includegraphics[width=3.0in]{figs/towers}}

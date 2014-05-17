@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  16 MAY 2014 17:18
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  17 MAY 2014 21:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -528,31 +528,26 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.91925pt on input line 87.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 87.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 89.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 91.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 93.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 95.
  [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (0.66032pt too wide) in paragraph at lines 113--120
-[]\T1/ppl/m/n/10 Despite its sim-plic-ity, the model gen-er-ates out-comes that
- re-sem-ble the real world. When
- []
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 119
+.
 
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [2]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 154.
-[2]
-Overfull \hbox (1.4176pt too wide) in paragraph at lines 182--182
-[]              \T1/cmtt/m/n/10 health_color = (0, 0, loc.get_sugar_amt()/loc.g
-et_max_sugar())[] 
- []
-
-[3]
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 143.
+ [3]
 Package epstopdf Info: Source file: <figs/towers.eps>
 (epstopdf)                    date: 2011-08-02 22:21:14
 (epstopdf)                    size: 8429 bytes
@@ -561,14 +556,15 @@ Package epstopdf Info: Source file: <figs/towers.eps>
 (epstopdf)                    size: 3150 bytes
 (epstopdf)             Command: <repstopdf --outfile=figs/towers-eps-converted-
 to.pdf figs/towers.eps>
-(epstopdf)             \includegraphics on input line 226.
+(epstopdf)             \includegraphics on input line 201.
 Package epstopdf Info: Output file is already uptodate.
- <figs/towers-eps-converted-to.pdf, id=21, 659.46375pt x 158.5925pt>
+
+<figs/towers-eps-converted-to.pdf, id=21, 659.46375pt x 158.5925pt>
 File: figs/towers-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figs/towers-eps-converted-to.pdf>
-Package pdftex.def Info: figs/towers-eps-converted-to.pdf used on input line 22
-6.
+Package pdftex.def Info: figs/towers-eps-converted-to.pdf used on input line 20
+1.
 (pdftex.def)             Requested size: 216.81pt x 52.13966pt.
 Package epstopdf Info: Source file: <figs/towers.eps>
 (epstopdf)                    date: 2011-08-02 22:21:14
@@ -578,43 +574,11 @@ Package epstopdf Info: Source file: <figs/towers.eps>
 (epstopdf)                    size: 3150 bytes
 (epstopdf)             Command: <repstopdf --outfile=figs/towers-eps-converted-
 to.pdf figs/towers.eps>
-(epstopdf)             \includegraphics on input line 254.
+(epstopdf)             \includegraphics on input line 233.
 Package epstopdf Info: Output file is already uptodate.
 File: figs/towers-eps-converted-to.pdf Graphic file (type pdf)
  <use figs/towers-eps-converted-to.pdf>
-Package pdftex.def Info: figs/towers-eps-converted-to.pdf used on input line 25
-4.
-(pdftex.def)             Requested size: 216.81pt x 52.13966pt.
-Package epstopdf Info: Source file: <figs/towers.eps>
-(epstopdf)                    date: 2011-08-02 22:21:14
-(epstopdf)                    size: 8429 bytes
-(epstopdf)             Output file: <figs/towers-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-05-15 12:20:32
-(epstopdf)                    size: 3150 bytes
-(epstopdf)             Command: <repstopdf --outfile=figs/towers-eps-converted-
-to.pdf figs/towers.eps>
-(epstopdf)             \includegraphics on input line 259.
-Package epstopdf Info: Output file is already uptodate.
-File: figs/towers-eps-converted-to.pdf Graphic file (type pdf)
-
-<use figs/towers-eps-converted-to.pdf>
-Package pdftex.def Info: figs/towers-eps-converted-to.pdf used on input line 25
-9.
-(pdftex.def)             Requested size: 216.81pt x 52.13966pt.
- [4 <./figs/towers-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <figs/towers.eps>
-(epstopdf)                    date: 2011-08-02 22:21:14
-(epstopdf)                    size: 8429 bytes
-(epstopdf)             Output file: <figs/towers-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-05-15 12:20:32
-(epstopdf)                    size: 3150 bytes
-(epstopdf)             Command: <repstopdf --outfile=figs/towers-eps-converted-
-to.pdf figs/towers.eps>
-(epstopdf)             \includegraphics on input line 273.
-Package epstopdf Info: Output file is already uptodate.
-File: figs/towers-eps-converted-to.pdf Graphic file (type pdf)
-<use figs/towers-eps-converted-to.pdf>
-Package pdftex.def Info: figs/towers-eps-converted-to.pdf used on input line 27
+Package pdftex.def Info: figs/towers-eps-converted-to.pdf used on input line 23
 3.
 (pdftex.def)             Requested size: 216.81pt x 52.13966pt.
 Package epstopdf Info: Source file: <figs/towers.eps>
@@ -625,37 +589,74 @@ Package epstopdf Info: Source file: <figs/towers.eps>
 (epstopdf)                    size: 3150 bytes
 (epstopdf)             Command: <repstopdf --outfile=figs/towers-eps-converted-
 to.pdf figs/towers.eps>
-(epstopdf)             \includegraphics on input line 287.
+(epstopdf)             \includegraphics on input line 238.
+Package epstopdf Info: Output file is already uptodate.
+File: figs/towers-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figs/towers-eps-converted-to.pdf>
+Package pdftex.def Info: figs/towers-eps-converted-to.pdf used on input line 23
+8.
+(pdftex.def)             Requested size: 216.81pt x 52.13966pt.
+Package epstopdf Info: Source file: <figs/towers.eps>
+(epstopdf)                    date: 2011-08-02 22:21:14
+(epstopdf)                    size: 8429 bytes
+(epstopdf)             Output file: <figs/towers-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-05-15 12:20:32
+(epstopdf)                    size: 3150 bytes
+(epstopdf)             Command: <repstopdf --outfile=figs/towers-eps-converted-
+to.pdf figs/towers.eps>
+(epstopdf)             \includegraphics on input line 252.
 Package epstopdf Info: Output file is already uptodate.
 File: figs/towers-eps-converted-to.pdf Graphic file (type pdf)
  <use figs/towers-eps-converted-to.pdf>
-Package pdftex.def Info: figs/towers-eps-converted-to.pdf used on input line 28
-7.
+Package pdftex.def Info: figs/towers-eps-converted-to.pdf used on input line 25
+2.
 (pdftex.def)             Requested size: 216.81pt x 52.13966pt.
 
-[5] (./book.aux) ) 
+[4 <./figs/towers-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figs/towers.eps>
+(epstopdf)                    date: 2011-08-02 22:21:14
+(epstopdf)                    size: 8429 bytes
+(epstopdf)             Output file: <figs/towers-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-05-15 12:20:32
+(epstopdf)                    size: 3150 bytes
+(epstopdf)             Command: <repstopdf --outfile=figs/towers-eps-converted-
+to.pdf figs/towers.eps>
+(epstopdf)             \includegraphics on input line 266.
+Package epstopdf Info: Output file is already uptodate.
+File: figs/towers-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figs/towers-eps-converted-to.pdf>
+Package pdftex.def Info: figs/towers-eps-converted-to.pdf used on input line 26
+6.
+(pdftex.def)             Requested size: 216.81pt x 52.13966pt.
+ [5] [6] (./book.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4695 strings out of 493485
- 63426 string characters out of 3143526
- 117751 words of memory out of 3000000
- 7861 multiletter control sequences out of 15000+200000
- 33235 words of font info for 73 fonts, out of 3000000 for 9000
+ 4704 strings out of 493485
+ 63865 string characters out of 3143526
+ 118751 words of memory out of 3000000
+ 7869 multiletter control sequences out of 15000+200000
+ 30981 words of font info for 69 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,5n,43p,1144b,235s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/
-usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfit1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/palatino/uplri8a.pfb>
-Output written on book.pdf (5 pages, 162164 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
+fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/
+enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfit1000.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino
+/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb
+>
+Output written on book.pdf (6 pages, 155132 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

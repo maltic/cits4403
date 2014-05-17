@@ -66,16 +66,26 @@ def plot(events):
     Zipf.plot_ranks(hist, 'log')
 
 
+def get_notes(fname):
+    pattern = fileio.read_midifile(fname)
+    notes = []
+    for track in pattern:
+        for event in track:
+            if event.name == "Note On" and event.data[1] > 0:
+                notes.append(event.data[0])
+    return notes
+
+
 def note_analysis(midipattern, n=2):
     notes = []
     for track in midipattern:
         for event in track:
             if event.name == "Note On" and event.data[1] > 0:
-                notes.append(event.data[0])
+                notes.append(event)
+    notes.sort(key=lambda x: x.tick)
     grouped = []
     for i in range(len(notes)-n+1):
-        grouped.append(tuple([notes[i+j] for j in range(n)]))
-
+        grouped.append(tuple([notes[i+j].data[0] for j in range(n)]))
     return grouped
 
 def notevelocity_analysis(midipattern, n=1):
@@ -83,10 +93,13 @@ def notevelocity_analysis(midipattern, n=1):
     for track in midipattern:
         for event in track:
             if event.name == "Note On" and event.data[1] > 0:
-                notes.append(tuple(event.data))
+                notes.append(event)
+
+    notes.sort(key=lambda x: x.tick)
+    # print notes
     grouped = []
     for i in range(len(notes)-n+1):
-        grouped.append(tuple([notes[i+j] for j in range(n)]))
+        grouped.append(tuple([tuple(notes[i+j].data) for j in range(n)]))
 
     return grouped
 
@@ -94,10 +107,11 @@ def notevelocity_analysis(midipattern, n=1):
 
 
 def main(name, fname, *args):
+    print get_notes(fname)
 
-    m = Midi(fname)
+    # m = Midi(fname)
     pattern = fileio.read_midifile(fname)
-    events = note_analysis(pattern)
+    events = notevelocity_analysis(pattern)
     plot(events)
 
 
