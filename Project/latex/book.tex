@@ -124,7 +124,7 @@ if __name__ == '__main__':
 
 The way MIDI patterns are represented in \texttt{python-midi} is straightforward. A pattern is a list of tracks. A track is a list of events. Every event has a type, and associated meta-data. All of these classes also have the \texttt{\_\_repr\_\_} method overloaded. This makes it easy to determine what information is available. A quirk of some older MIDI files is that a Note On event with velocity 0 is equivalent to the corresponding Note Off event. Keep this in mind when experimenting with MIDI files.
 
-The Classical Archive has some excellent MIDI encodings of classical music (available at \url{http://www.classicalarchives.com/midi.html}). You may wish to find some songs which you enjoy, many people have made their MIDI versions of songs freely available on the Internet. There is also software that allows the user to write MIDI music using a graphic environment. If you are so inclined, it is possible to analyse your own compositions.
+The Classical Archive has some excellent MIDI encodings of classical music (available at \url{http://www.classicalarchives.com/midi.html}). You may also wish to find some songs which you enjoy, many people have made their MIDI versions of songs freely available on the Internet. There is also software that allows the user to write MIDI music using a graphic environment. If you are so inclined, it is possible to analyse your own compositions.
 
 
 \begin{exercise}
@@ -141,6 +141,7 @@ Attempt to write a script that outputs the number of distinct notes in a MIDI fi
 Zipf's law refers to the frequency of words found in a large corpus of natural language. It is hard to see how the concept of a word could apply to musical compositions. Of course, any interpretation of a word in music is necessarily arbitrary and somewhat open to interpretation. Despite this, I shall now describe several feasible candidates. Clearly the most obviously irreducible component of a musical composition is the note. Building upon this starting point, one might analyse the velocities, lengths, or the spacing between similar notes. More complex interpretations may attempt to group notes into structures like chords or melodies. I shall, however, start with a much simpler interpretation.
 
 \subsection{Note Groupings}
+\label{sec:note_group}
 As I have said, we can break a piece of music up into notes. If we define a word as a single note, we can then collect the frequencies of these notes, and thence subject them to Zipfian analysis. This necessitates going through every MIDI event in every MIDI track for any given pattern. The \texttt{python-midi} package makes this quite easy, as tracks and events are represented as objects that inherit from \texttt{list}. Here is a simple function that returns all the notes (in no particular order) given the path to a MIDI file.
 
 \begin{verbatim}
@@ -154,7 +155,41 @@ def get_notes(fname):
     return notes
 \end{verbatim}
 
-The first line reads and parses the MIDI into a pattern. The follow two loops examine every event in the pattern. Every time a genuine Note On event is spotted (remember that a Note On event with velocity 0 is actually a Note Off event) it is added to the \texttt{notes} list. It should be pointed out that event data is stored in the \texttt{event.data} member. For Note On events, index zero is the MIDI note, and index one is the velocity. After executing this function, we now have everything we need to create a CDF... etc
+The first line reads and parses the MIDI into a pattern. The follow two loops examine every event in the pattern. Every time a genuine Note On event is spotted (remember that a Note On event with velocity 0 is actually a Note Off event) it is added to the \texttt{notes} list. It should be pointed out that event data is stored in the \texttt{event.data} member. For Note On events, index zero is the MIDI note, and index one is the velocity. After executing this function, we now have everything we need to calculate frequency as a function of rank.
+
+
+\subsection{Consecutive Notes}
+A more versatile way of using note frequencies is to consider sequences of consecutive notes. This is equivalent to sorting all the notes in the MIDI file by order of appearance, then running a sliding window of fixed size over all the notes. This will result in a much larger corpus of possible words. For example, a window size of two will have $128^2$ possible words, every combination of two MIDI notes. Having a window size of one is the same as the approach previously described in Section \ref{sec:note_group}. Having a too large window size can be a problem, however, as it often results in having many words with very low frequency. I found that a window size of two was typically the best. Very long pieces of music may work with larger window sizes, however.
+
+Figure of sliding window
+
+\begin{exercise}
+See if you implement the sliding window note analysis technique described in this section. Note On objects have a member called \texttt{tick}, which is the number of ticks before they appear in the MIDI song. You may wish to use this for sorting. My solution can be found at URL.
+\end{exercise}
+
+
+\subsection{Note and Velocity}
+I have outlined how we could use the occurrence of notes as an interpretation of words for Zipfian analysis. However, a Note On event has two components; the note and its velocity. Another reasonable interpretation of a word is to use a tuple of these data. A quirk of the \texttt{python-midi} package is that \texttt{event.data} is actually a list. Because of this, I have used the built-in function \texttt{tuple} to convert it to a tuple in the code snipped presented below.
+
+\begin{verbatim}
+def get_notevelocities(fname):
+    pattern = fileio.read_midifile(fname)
+    notes = []
+    for track in pattern:
+        for event in track:
+            if event.name == "Note On" and event.data[1] > 0:
+                notes.append(tuple(event.data))
+    return notes
+\end{verbatim}
+
+
+\begin{exercise}
+Can you think of any problems with this method? Would using a sliding window over notes and velocities be a good idea?
+\end{exercise}
+
+
+
+\subsection{Note Distribution}
 
 
 
