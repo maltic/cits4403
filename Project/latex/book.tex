@@ -88,7 +88,7 @@ Zipf's law was introduced in Chapter 5. To recapitulate, it posits that the freq
 
 Figure of a log log zipf graph here
 
-Music, among other art forms, is often regarded as communication. Like other forms of human communication it has structure and rules. While I shall not give a formal definition of these, the reader may refer to \url{http://en.wikipedia.org/wiki/Music_theory} for a concise overview. This chapter investigates Zipf's law in music. This is done using the MIDI file type, which is a relatively simple and widely used way to encode music digitally.
+Music, among other art forms, is often regarded as communication. Like other forms of human communication it has structure and rules. While I shall not give a formal definition of these, the reader may refer to \url{http://en.wikipedia.org/wiki/Music_theory} for a concise overview. This chapter investigates Zipf's law in music. This is done by using the MIDI file type, which is a relatively simple and widely used way to encode digital music.
 
 
 \begin{exercise}
@@ -140,7 +140,7 @@ Attempt to write a script that outputs the number of distinct notes in a MIDI fi
 
 Zipf's law refers to the frequency of words found in a large corpus of natural language. It is hard to see how the concept of a word could apply to musical compositions. Of course, any interpretation of a word in music is necessarily arbitrary and somewhat open to interpretation. Despite this, I shall now describe several feasible candidates. Clearly the most obviously irreducible component of a musical composition is the note. Building upon this starting point, one might analyse the velocities, lengths, or the spacing between similar notes. More complex interpretations may attempt to group notes into structures like chords or melodies. I shall, however, start with a much simpler interpretation.
 
-\subsection{Note Groupings}
+\subsection{Notes}
 \label{sec:note_group}
 As I have said, we can break a piece of music up into notes. If we define a word as a single note, we can then collect the frequencies of these notes, and thence subject them to Zipfian analysis. This necessitates going through every MIDI event in every MIDI track for any given pattern. The \texttt{python-midi} package makes this quite easy, as tracks and events are represented as objects that inherit from \texttt{list}. Here is a simple function that returns all the notes (in no particular order) given the path to a MIDI file.
 
@@ -168,7 +168,7 @@ See if you implement the sliding window note analysis technique described in thi
 \end{exercise}
 
 
-\subsection{Note and Velocity}
+\subsection{Note and Velocity Pairs}
 I have outlined how we could use the occurrence of notes as an interpretation of words for Zipfian analysis. However, a Note On event has two components; the note and its velocity. Another reasonable interpretation of a word is to use a tuple of these data. A quirk of the \texttt{python-midi} package is that \texttt{event.data} is actually a list. Because of this, I have used the built-in function \texttt{tuple} to convert it to a tuple in the code snipped presented below.
 
 \begin{verbatim}
@@ -184,12 +184,24 @@ def get_notevelocities(fname):
 
 
 \begin{exercise}
-Can you think of any problems with this method? Would using a sliding window over notes and velocities be a good idea?
+Can you think of any problems with this method? Would using a sliding window over note and velocity pairs be a good idea?
 \end{exercise}
 
 
 
-\subsection{Note Distribution}
+\subsection{Note Intervals}
+Thus far, all the word interpretations I have described deal with discrete events directly. As an alternative, we may wish to take a more high level approach. For every MIDI note frequency that appears in a MIDI pattern, the intervals between specific notes could be recorded. For example, if the note code 60 appears at tick 110, then later at 120, then again at 135, we would record intervals of 10 and 15. Such intervals could be collected for every note in the MIDI pattern, and collated into one list. We can then calculate the rank and frequency of note intervals for further analysis.
+
+\begin{exercise}
+Implement the \texttt{get\_noteintervals} function. Modifying the \texttt{get\_notes} function might make this easier. Don't forget to sort all MIDI events by tick first. (Hint: use a dictionary to store the last occurrence of every note code.)
+\end{exercise}
+
+\begin{exercise}
+Can you think of any other aspects of music that might reasonably conform to Zipf's law? If you can think of any, implement a getter function like those present in this section.
+\end{exercise}
+
+
+
 
 
 
@@ -223,7 +235,7 @@ without crippling the society.
 
 
 
-\section{Zipf's Law and Beauty}
+\section{The Beauty of Context}
 
 Talk about how Zipf's law may be a precondition for beautiful music
 
