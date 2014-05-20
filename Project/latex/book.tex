@@ -213,6 +213,52 @@ remind to sort by ticks
 
 
 \section{Scale-free Music}
+In Chapter 5, we created a number of useful classes and functions for dealing with Zipf, and other power law, distributions. A copy of these files was helpful in analysing the words described in the preceding section. Using the \texttt{Pmf.py} and \texttt{Zipf.py} modules, a histogram can be created for ranks and frequencies. From here we can plot a log-log graph of ranks versus frequencies. If the graph looks somewhat like a straight line with slope $\approx -1$ then this confirms that the rank-frequency function is Zipfian. For analysis I chose `Wish You Were Here' and `Comfortably Numb' by Pink Floyd, Rachmaninov's `Allegro Ma Non Tanto' (No. 3 in D minor, Op. 30), and Brahms `Hungarian Dance' No. 1. First, let us see a simple distribution of single note frequencies.
+
+
+\begin{figure}[!htb]
+\minipage{0.4\textwidth}
+  \includegraphics[width=\linewidth]{hungdan_notes_1}
+  \caption{Hungarian Dance No. 1 using single notes}\label{fig:hungdan_notes_1}
+\endminipage\hfill
+\minipage{0.4\textwidth}
+  \includegraphics[width=\linewidth]{wish_notes_1}
+  \caption{Wish You Were Here using single notes}\label{fig:wish_notes_1}
+\endminipage\hfill
+\minipage{0.4\textwidth}%
+  \includegraphics[width=\linewidth]{rach_notes_1}
+  \caption{Allegro Ma Non Tanto using single notes}\label{fig:rach_notes_1}
+\endminipage\hfill
+\minipage{0.4\textwidth}%
+  \includegraphics[width=\linewidth]{comf_notes_1}
+  \caption{Comfortably Numb using single notes}\label{fig:comf_notes_1}
+\endminipage
+\end{figure}
+
+
+
+\begin{figure}[!htb]
+\minipage{0.4\textwidth}
+  \includegraphics[width=\linewidth]{hungdan_notes_2}
+  \caption{A really Awesome Image}\label{fig:awesome_image1}
+\endminipage\hfill
+\minipage{0.4\textwidth}
+  \includegraphics[width=\linewidth]{wish_notes_2}
+  \caption{A really Awesome Image}\label{fig:awesome_image2}
+\endminipage\hfill
+\minipage{0.4\textwidth}%
+  \includegraphics[width=\linewidth]{rach_notes_2}
+  \caption{A really Awesome Image}\label{fig:awesome_image3}
+\endminipage\hfill
+\minipage{0.4\textwidth}%
+  \includegraphics[width=\linewidth]{comf_notes_2}
+  \caption{A really Awesome Image}\label{fig:awesome_image3}
+\endminipage
+\end{figure}
+
+
+
+
 
 This is the results section
 

@@ -5,6 +5,11 @@ import Pmf
 import Cdf
 import Zipf
 
+
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.optimize import curve_fit
+
 def concatBits(b0, b1, bits = 8):
     ans = 0
     for i in range(bits):
@@ -61,6 +66,40 @@ class Midi(object):
         self.index += noBytes
 
 
+def linearEq(x, m, c):
+    return m*x + c
+
+
+
+def expEq(x, p, m, c):
+    return m * np.power(x, -p) + c
+
+def linearRegression(vals):
+    x = np.array(vals)
+    y = linearEq(x, 2.0, 1.0)
+    yn = y + 0.001*np.random.normal(size=len(x))
+    popt, pcov = curve_fit(linearEq, x, yn)
+    print popt, pcov
+    plt.figure()
+    plt.plot(x, yn, 'ko', label="Original Noised Data")
+    plt.plot(x, linearEq(x, *popt), 'r-', label="Fitted Curve")
+    plt.legend()
+    plt.show()
+
+
+
+def expReg(xs, ys):
+    x = np.array(xs)
+    yn = np.array(ys)
+    popt, pcov = curve_fit(expEq, x, yn)
+    print popt, pcov
+    plt.figure()
+    plt.plot(x, yn, 'ko', label="Original Noised Data")
+    plt.plot(x, expEq(x, *popt), 'r-', label="Fitted Curve")
+    plt.legend()
+    plt.show()
+
+
 def plot(events):
     hist = Pmf.MakeHistFromList(events)
     Zipf.plot_ranks(hist, 'log')
@@ -107,12 +146,17 @@ def notevelocity_analysis(midipattern, n=1):
 
 
 def main(name, fname, *args):
-    print get_notes(fname)
+    # print get_notes(fname)
 
     # m = Midi(fname)
     pattern = fileio.read_midifile(fname)
-    events = notevelocity_analysis(pattern)
+    events = note_analysis(pattern)
     plot(events)
+    # ranks = Zipf.rank_freq(Pmf.MakeHistFromList(events))
+    # xs = [float(i) for i, j in ranks]
+    # ys = [float(j) for i, j in ranks]
+    # expReg(xs, ys)
+    # print ranks
 
 
 if __name__ == '__main__':
