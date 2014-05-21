@@ -203,15 +203,6 @@ Can you think of any other aspects of music that might reasonably conform to Zip
 
 
 
-
-
-Going to explain all the different `words'
-
-exercises will be the implement as many types as possible
-
-remind to sort by ticks
-
-
 \section{Scale-free Music}
 In Chapter 5, we created a number of useful classes and functions for dealing with Zipf, and other power law, distributions. A copy of these files was helpful in analysing the words described in the preceding section. Using the \texttt{Pmf.py} and \texttt{Zipf.py} modules, a histogram can be created for ranks and frequencies. From here we can plot a log-log graph of ranks versus frequencies. If the graph looks somewhat like a straight line with slope $\approx -1$ then this confirms that the rank-frequency function is Zipfian. For analysis I chose `Wish You Were Here' and `Comfortably Numb' by Pink Floyd, Rachmaninov's `Allegro Ma Non Tanto' (No. 3 in D minor, Op. 30), and Brahms `Hungarian Dance' No. 1. First, let us see a simple distribution of single note frequencies.
 
@@ -235,49 +226,39 @@ In Chapter 5, we created a number of useful classes and functions for dealing wi
 \endminipage
 \end{figure}
 
+Figures \ref{fig:hungdan_notes_1} - \ref{fig:comf_notes_1} show log-log plots of frequency versus rank for my selected songs. These graphs only look somewhat Zipfian. Typically a graph starts like a line, but drops off quickly towards the end. It is important to remember that songs are generally only a few minutes long, and are not comparable in size to a novel. As such, I argue that this constitutes evidence that music exhibits Zipf's law to a remarkable degree. To further test my hypothesis, I ran the exact same test, except using a sliding window of size two. This means that every pair of adjacent notes was used a `word' for the purposes of calculating a frequency.
+
 
 
 \begin{figure}[!htb]
 \minipage{0.4\textwidth}
   \includegraphics[width=\linewidth]{hungdan_notes_2}
-  \caption{A really Awesome Image}\label{fig:awesome_image1}
+  \caption{Hungarian Dance No. 1 using a sliding window over pairs of notes}\label{fig:hungdan_notes_2}
 \endminipage\hfill
 \minipage{0.4\textwidth}
   \includegraphics[width=\linewidth]{wish_notes_2}
-  \caption{A really Awesome Image}\label{fig:awesome_image2}
+  \caption{Wish You Were Here using a sliding window over pairs of notese}\label{fig:wish_notes_2}
 \endminipage\hfill
 \minipage{0.4\textwidth}%
   \includegraphics[width=\linewidth]{rach_notes_2}
-  \caption{A really Awesome Image}\label{fig:awesome_image3}
+  \caption{Allegro Ma Non Tanto using a sliding window over pairs of notes}\label{fig:rach_notes_2}
 \endminipage\hfill
 \minipage{0.4\textwidth}%
   \includegraphics[width=\linewidth]{comf_notes_2}
-  \caption{A really Awesome Image}\label{fig:awesome_image3}
+  \caption{Comfortably Numb using a sliding window over pairs of notes}\label{fig:comf_notes_2}
 \endminipage
 \end{figure}
 
+As can be seen in Figures \ref{fig:hungdan_notes_2} - \ref{fig:comf_notes_2}, using a sliding window over note pairs was a little more compelling. A similar pattern emerges: a line that eventually drops off towards the end. However the suddenness of the drop off is typically less, and the extend of the line typically larger. Brahms Hungarian Dance No. 1 in particular looks notably like a typical Zipf distribution.
 
 
+\begin{exercise}
+Use some music of your choosing to recreate these graphs. Do you see a similar pattern?
+\end{exercise}
 
-
-This is the results section
-
-show some log log plots
-
-show some correlations
-
-ask the reader to implement their own stuff
-
-Our implementation of Sugarscape aims to study the effect of taxation
-on the wealth of a society. We want to show how extreme under- or
-over-taxation can affect the society and its individual agents, and
-what happens in between these two extremes. The model tests a ``flat
-tax'' system where every agent gets taxed a constant rate (say 10\% of
-its total wealth) and the tax pool is redistributed evenly among all
-the agents. We recreate the original Sugarscape and expand on it with
-the end goal of determining whether it is possible to shrink the wealth gap
-without crippling the society.
-
+\begin{exercise}
+In the previous chapter, several other interpretations of a music `word' were discussed. Attempt to find if they follow Zipf's law in the MIDI tracks you chose.
+\end{exercise}
 
 
 
