@@ -57,6 +57,7 @@
 \usepackage{hevea}
 \usepackage{verbatim}
 \usepackage{upquote}
+\usepackage{parskip}
 
 \newcommand{\thetitle}{Think Complexity}
 \newcommand{\theversion}{1.2.2}
@@ -257,129 +258,28 @@ Use some music of your choosing to recreate these graphs. Do you see a similar p
 \end{exercise}
 
 \begin{exercise}
-In the previous chapter, several other interpretations of a music `word' were discussed. Attempt to find if they follow Zipf's law in the MIDI tracks you chose.
+In the previous chapter, several other interpretations of a musical `word' were discussed. Test if they follow Zipf's law in the MIDI tracks you chose.
 \end{exercise}
 
 
 
 \section{The Beauty of Context}
 
-Talk about how Zipf's law may be a precondition for beautiful music
+In 1955, Simon published a paper which attempted to explain Zipf's law. He noted that it had been observed in many vastly different, and probably unconnected, domains. For example, Zipf's law can be found the distribution of scientists and their published papers, and as we discovered in Chapter 5, in the rank of cities by population. A copy of Simon's original paper, "On a Class of Skew Distribution Functions", can be found here \url{http://www.uvm.edu/~pdodds/teaching/courses/2009-08UVM-300/docs/others/1955/simon1955.pdf}. It contains a lengthy and somewhat impenetrable explanation of why Zipf's law might exist. The essence of his idea is quite straightforward, however.
 
-reference that paper that used it as a fitness function
+Simon posits that large bodies of literature of generally constructive. Consecutive words are appended one by one to the end, which is precisely what is happening as I write this. As words are added, a context is created. As this context emerges ex nihilo, is favours the reuse of previous words to maintain the context. In a similar sense, the introduction of new words is also inhibited. This model presupposes that context is an essential part of communication, and any other process that exhibits a scale-free distribution. Intuitively it is easy to see the importance of context to human communication. Say that we take a novel and randomly shuffle sentences around. It is overwhelming likely that the book is now unintelligible. The linear construction of the book's context would have been destroyed. Similarly, take a piece of music and shuffle around movements randomly. Though each individual component would make sense, the cohesion of the whole would be destroyed.
 
-Talk about how pink noise is nicer than brown/white
-Ask the reader to listen to all the kinds of noise
+As recently as 2005, Bill, Juan, and Penousal used Zipf's law to definite a fitness function for judging music. Obviously such a function is useful for the computer generation of pleasant music. They used a large array of tests, encompassing and eclipsing those presented here. Much like we found the previous chapter, they discovered that Zipf's law was present in musical compositions. Furthermore, they found that it was not present in non-music compositions. In addition to this, they were able to train an artificial neural network to differentiate between genres of music, using the slope of the regression line for the log-log diagram of frequency and rank. It was also able to accurately distinguish the work of different composers within the same genre. On the strength of their findings, they concluded that Zipf's law was a necessary, though not complete, precondition for aesthetically pleasing music. The interested reader can find a copy of their paper, "Zipf's Law, Music Classification, and Aesthetics", at \url{http://www.idi.ntnu.no/emner/tdt04/2010\%20articles/Zipf-music-johannes.pdf}.
 
-\begin{figure}[ht]
-\centerline{\includegraphics[width=3.0in]{figs/towers}}
-\caption{Histogram of wealth with no tax.\label{fig.notax}}
-\end{figure}
-
-To compare the effect of taxation on wealth distribution, we need a
-metric that measures how distributed or flat a certain wealth
-distribution is.  We use the Gini coefficient, which is often used in
-economics to measure the wealth gap (see
-\url{http://en.wikipedia.org/wiki/Gini_coefficient}). The Gini
-coefficient is between 0 and 1, with 0 the measurement of a perfectly
-uniform distribution, and 1 the measurement of a distribution with
-complete inequality.
-
-Figure~\ref{fig.notax} shows a histogram describing the wealth
-distribution when there is no tax system in place. For most initial
-conditions without taxation, the Sugarscape quickly develops a
-long-tailed distribution of wealth, skewed to the right. In these
-cases, some agents die quickly, particularly in an environment with
-many agents or one with low sugar regrowth rate. The separation
-between the rich and the poor is significant, and there aren't many
-agents occupying the middle ground. This is seen in real life in
-societies where there is no tax structure and there isn't much of a
-middle class.
-
-
-\section{Reductionism or Holism?}
-
-Written English and Music both share Zipfian properties. A holist would say that Zipf's law is an underlying property of natural languages. What would a reductionist say? Remember that we have reduce language and music alike down too words. This is much the same way a physicist might modle suns and planets like point masses. Can we use this property to make predictions about other natural languages. What would an instrumentalist say? How about a realist?
-
-The construction hypothesis; language and music have these properties because they are constructed.
-
-\begin{figure}[ht]
-\centerline{\includegraphics[width=3.0in]{figs/towers}}
-\caption{Histogram of wealth, with tax.\label{fig.withtax}}
-\end{figure}
-
-\begin{figure}[ht]
-\centerline{\includegraphics[width=3.0in]{figs/towers}}
-\caption{The Gini coefficient versus the tax rate.\label{fig.gini}}
-\end{figure}
-
-Figure~\ref{fig.withtax} shows the effect of a relatively high tax
-rate. The agents have a similar amount of sugar, and the economy has a
-low Gini coefficient, 0.02.
-
-Figure~\ref{fig.gini} shows that
-higher taxes in general result in lower Gini coefficients. This makes
-sense, since the point of our tax system is to redistribute
-wealth.
-
-\begin{figure}[ht]
-\centerline{\includegraphics[width=3.0in]{figs/towers}}
-\caption{Mean wealth versus tax rate.\label{fig.wealth}}
-\end{figure}
-
-In this model, perfect equality comes at a price.  With no taxation
-the mean wealth was 358; with a 20\% tax rate it drops to 157.
-Figure~\ref{fig.wealth} shows the effect of tax rate on wealth;
-mean wealth gets smaller as taxes get higher.
-
-
-
-\section{Instrumentalism and Music}
-
-\begin{figure}[ht]
-\centering{\includegraphics[width=3.0in]{figs/towers}}
-\caption{Bottom quartile value versus tax rate. At 4\% the average wealth of the bottom quartile is maximized.\label{fig.optimal}}
-\end{figure}
-
-%\begin{figure}[ht]
-%\centerline{\includegraphics[width=3.0in]{figs/pmf_2percent.pdf}}
-%\caption{The wealth distribution for a smaller tax rate (2\%). There is still s%ome deviation, but the mean wealth is high.}
-%\end{figure}
-
-It's up to a society to determine its ideal wealth distribution. 
-In our model, there is a conflict between the goals of maximizing
-total wealth and minimizing inequality.
-
-One way to reconcile this conflict is to maximize the wealth of
-the bottom quartile.  Figure~\ref{fig.optimal} shows the mean
-wealth of the poorest 25\% for a range of tax rates.  The optimal
-tax rate is around 4\%.  At lower rates, there is more total
-wealth, but the poor do not share it.  At higher rates, the poor
-have a bigger share of a smaller pie.
-
-Of course, this result depends on the details of our Sugarscape,
-especially the model of productivity.  But this simple model
-provides a way to explore relationships between wealth creation,
-taxation and inequality.
+Clearly, claiming that music and language are similar because they both exhibit Zipf's law is an argument from analogy, and thus is also an holistic argument. However, what about Simon's model? Read his paper, does it appear to be reductionist, or holistic? Furthermore, is Simon's constructive argument based on an instrumentalist point of view, or realist? To clarify, we have two systems, that of language, and that of music. Both have the same property, Zipf's law. A holist would argue that this is because such a law is a fundamental or essential property of both. However, Simon has argued that this property can be explained constructively; at a very law level, music and language are similar, and as a result they share an emergent property. Sometimes the lines between holism, reductionism, instrumentalism, and realism can be ill-defined, this is a good example. Regardless, it is clear that Zipf's law is present in music. Why is another, and perhaps more intractable, question.
 
 \begin{exercise}
-
-You can download our implementation of Sugarscape from
-\url{thinkcomplex.com/Sugarscape.zip}.  Launch it by running
-{\tt Gui.py}.  The sliders allow you to control the parameters
-of the simulation.  Experiment with these parameters to see what
-effect they have on the distribution of wealth.
-
+Find examples of white noise, pink noise, and brown noise on the Internet. (YouTube is a good place to look.) Which do you prefer, and why? (Hint: Pink noise is also called $1/f$ noise.)
 \end{exercise}
 
 \begin{exercise}
-
-You can download our implementation of Sugarscape from
-\url{thinkcomplex.com/Sugarscape.zip}.  Launch it by running
-{\tt Gui.py}.  The sliders allow you to control the parameters
-of the simulation.  Experiment with these parameters to see what
-effect they have on the distribution of wealth.
-
+Have a look at some of the properties that exhibited a Zipfian distribution in Bill, Juan, and Penousal's paper. See if you can implement them, and reproduce their results.
 \end{exercise}
+
 
 \end{document}

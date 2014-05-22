@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  21 MAY 2014 19:39
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  22 MAY 2014 13:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -356,6 +356,9 @@ Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 Package: upquote 2003/08/11 v1.1 Covington's upright-quote modification to verb
 atim and verb
 )
+(/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2001/04/09 non-zero parskip adjustments
+)
 \@indexfile=\write4
 \openout4 = `book.idx'.
 
@@ -365,25 +368,25 @@ Writing index file book.idx
 (./book.aux)
 \openout1 = `book.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 77.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 78.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 77.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 78.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
@@ -483,226 +486,153 @@ e
 ))
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 81.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 82.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 81.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 82.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 85.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 87.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 86.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 88.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 87.
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 88.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 87.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 88.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 87.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 88.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 87.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 88.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 87.
+(Font)              scaled to size 10.42007pt on input line 88.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 87.
+(Font)              scaled to size 7.91925pt on input line 88.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 87.
+(Font)              scaled to size 6.25204pt on input line 88.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 87.
+(Font)              scaled to size 10.42007pt on input line 88.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 87.
+(Font)              scaled to size 7.91925pt on input line 88.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 87.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 91.
+(Font)              scaled to size 6.25204pt on input line 88.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 92.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 95.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 96.
+
+Underfull \vbox (badness 1337) has occurred while \output is active []
+
  [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 119
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 120
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ) [2]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 143.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 144.
  [3] [4]
 <hungdan_notes_1.png, id=24, 586.8324pt x 442.2924pt>
 File: hungdan_notes_1.png Graphic file (type png)
 
 <use hungdan_notes_1.png>
-Package pdftex.def Info: hungdan_notes_1.png used on input line 212.
+Package pdftex.def Info: hungdan_notes_1.png used on input line 213.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
  <wish_notes_1.png, id=26, 586.8324pt x 442.2924pt>
 File: wish_notes_1.png Graphic file (type png)
 
 <use wish_notes_1.png>
-Package pdftex.def Info: wish_notes_1.png used on input line 216.
+Package pdftex.def Info: wish_notes_1.png used on input line 217.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
  <rach_notes_1.png, id=27, 586.8324pt x 442.2924pt>
 File: rach_notes_1.png Graphic file (type png)
 
 <use rach_notes_1.png>
-Package pdftex.def Info: rach_notes_1.png used on input line 220.
+Package pdftex.def Info: rach_notes_1.png used on input line 221.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
  <comf_notes_1.png, id=28, 586.8324pt x 442.2924pt>
 File: comf_notes_1.png Graphic file (type png)
 
 <use comf_notes_1.png>
-Package pdftex.def Info: comf_notes_1.png used on input line 224.
+Package pdftex.def Info: comf_notes_1.png used on input line 225.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
  <hungdan_notes_2.png, id=29, 586.8324pt x 442.2924pt>
 File: hungdan_notes_2.png Graphic file (type png)
 
 <use hungdan_notes_2.png>
-Package pdftex.def Info: hungdan_notes_2.png used on input line 235.
+Package pdftex.def Info: hungdan_notes_2.png used on input line 236.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
  <wish_notes_2.png, id=30, 586.8324pt x 442.2924pt>
 File: wish_notes_2.png Graphic file (type png)
 
 <use wish_notes_2.png>
-Package pdftex.def Info: wish_notes_2.png used on input line 239.
+Package pdftex.def Info: wish_notes_2.png used on input line 240.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
  <rach_notes_2.png, id=31, 586.8324pt x 442.2924pt>
 File: rach_notes_2.png Graphic file (type png)
 
 <use rach_notes_2.png>
-Package pdftex.def Info: rach_notes_2.png used on input line 243.
+Package pdftex.def Info: rach_notes_2.png used on input line 244.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
  <comf_notes_2.png, id=32, 586.8324pt x 442.2924pt>
 File: comf_notes_2.png Graphic file (type png)
 
 <use comf_notes_2.png>
-Package pdftex.def Info: comf_notes_2.png used on input line 247.
+Package pdftex.def Info: comf_notes_2.png used on input line 248.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
  [5 <./hungdan_notes_1.png> <./wish_notes_1.png> <./rach_notes_1.png> <./comf_n
 otes_1.png>]
-Package epstopdf Info: Source file: <figs/towers.eps>
-(epstopdf)                    date: 2011-08-02 22:21:14
-(epstopdf)                    size: 8429 bytes
-(epstopdf)             Output file: <figs/towers-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-05-15 12:20:32
-(epstopdf)                    size: 3150 bytes
-(epstopdf)             Command: <repstopdf --outfile=figs/towers-eps-converted-
-to.pdf figs/towers.eps>
-(epstopdf)             \includegraphics on input line 275.
-Package epstopdf Info: Output file is already uptodate.
+Overfull \hbox (18.16376pt too wide) in paragraph at lines 268--269
+\T1/cmtt/m/n/10 www . uvm . edu / ~pdodds / teaching / courses / 2009-[]08UVM-[
+]300 / docs / others / 1955 / simon1955 .
+ []
 
-<figs/towers-eps-converted-to.pdf, id=40, 659.46375pt x 158.5925pt>
-File: figs/towers-eps-converted-to.pdf Graphic file (type pdf)
-
-<use figs/towers-eps-converted-to.pdf>
-Package pdftex.def Info: figs/towers-eps-converted-to.pdf used on input line 27
-5.
-(pdftex.def)             Requested size: 216.81pt x 52.13966pt.
- [6 <./hungdan_notes_2.png> <./wish_notes_2.png> <./rach_notes_2.png> <./comf_n
-otes_2.png> <./figs/towers-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <figs/towers.eps>
-(epstopdf)                    date: 2011-08-02 22:21:14
-(epstopdf)                    size: 8429 bytes
-(epstopdf)             Output file: <figs/towers-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-05-15 12:20:32
-(epstopdf)                    size: 3150 bytes
-(epstopdf)             Command: <repstopdf --outfile=figs/towers-eps-converted-
-to.pdf figs/towers.eps>
-(epstopdf)             \includegraphics on input line 307.
-Package epstopdf Info: Output file is already uptodate.
-File: figs/towers-eps-converted-to.pdf Graphic file (type pdf)
- <use figs/towers-eps-converted-to.pdf>
-Package pdftex.def Info: figs/towers-eps-converted-to.pdf used on input line 30
-7.
-(pdftex.def)             Requested size: 216.81pt x 52.13966pt.
-Package epstopdf Info: Source file: <figs/towers.eps>
-(epstopdf)                    date: 2011-08-02 22:21:14
-(epstopdf)                    size: 8429 bytes
-(epstopdf)             Output file: <figs/towers-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-05-15 12:20:32
-(epstopdf)                    size: 3150 bytes
-(epstopdf)             Command: <repstopdf --outfile=figs/towers-eps-converted-
-to.pdf figs/towers.eps>
-(epstopdf)             \includegraphics on input line 312.
-Package epstopdf Info: Output file is already uptodate.
-File: figs/towers-eps-converted-to.pdf Graphic file (type pdf)
-
-<use figs/towers-eps-converted-to.pdf>
-Package pdftex.def Info: figs/towers-eps-converted-to.pdf used on input line 31
-2.
-(pdftex.def)             Requested size: 216.81pt x 52.13966pt.
-Package epstopdf Info: Source file: <figs/towers.eps>
-(epstopdf)                    date: 2011-08-02 22:21:14
-(epstopdf)                    size: 8429 bytes
-(epstopdf)             Output file: <figs/towers-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-05-15 12:20:32
-(epstopdf)                    size: 3150 bytes
-(epstopdf)             Command: <repstopdf --outfile=figs/towers-eps-converted-
-to.pdf figs/towers.eps>
-(epstopdf)             \includegraphics on input line 326.
-Package epstopdf Info: Output file is already uptodate.
-File: figs/towers-eps-converted-to.pdf Graphic file (type pdf)
- <use figs/towers-eps-converted-to.pdf>
-Package pdftex.def Info: figs/towers-eps-converted-to.pdf used on input line 32
-6.
-(pdftex.def)             Requested size: 216.81pt x 52.13966pt.
-Package epstopdf Info: Source file: <figs/towers.eps>
-(epstopdf)                    date: 2011-08-02 22:21:14
-(epstopdf)                    size: 8429 bytes
-(epstopdf)             Output file: <figs/towers-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-05-15 12:20:32
-(epstopdf)                    size: 3150 bytes
-(epstopdf)             Command: <repstopdf --outfile=figs/towers-eps-converted-
-to.pdf figs/towers.eps>
-(epstopdf)             \includegraphics on input line 340.
-Package epstopdf Info: Output file is already uptodate.
-File: figs/towers-eps-converted-to.pdf Graphic file (type pdf)
-
-<use figs/towers-eps-converted-to.pdf>
-Package pdftex.def Info: figs/towers-eps-converted-to.pdf used on input line 34
-0.
-(pdftex.def)             Requested size: 216.81pt x 52.13966pt.
- [7] [8] (./book.aux) ) 
+[6 <./hungdan_notes_2.png> <./wish_notes_2.png> <./rach_notes_2.png> <./comf_no
+tes_2.png>] [7] (./book.aux) ) 
 Here is how much of TeX's memory you used:
- 4753 strings out of 493485
- 64853 string characters out of 3143526
- 118847 words of memory out of 3000000
- 7910 multiletter control sequences out of 15000+200000
+ 4738 strings out of 493485
+ 64811 string characters out of 3143526
+ 118821 words of memory out of 3000000
+ 7906 multiletter control sequences out of 15000+200000
  30981 words of font info for 69 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,7n,43p,1144b,272s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.e
-nc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texl
-ive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfi
-t1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/palatino/uplri8a.pfb>
-Output written on book.pdf (8 pages, 296985 bytes).
+ 38i,7n,43p,1144b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-sup
+er-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/sha
+re/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfit1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/palatino/uplri8a.pfb>
+Output written on book.pdf (7 pages, 295811 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 82 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
