@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  23 MAY 2014 13:32
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  25 MAY 2014 19:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -484,7 +484,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Chapter 1.
+Chapter 15.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 82.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
@@ -559,82 +559,96 @@ File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 144.
 
-[3] [4] <hungdan_notes_1.png, id=26, 586.8324pt x 442.2924pt>
+[3]
+Underfull \vbox (badness 1789) has occurred while \output is active []
+
+ [4]
+<hungdan_notes_1.png, id=26, 586.8324pt x 442.2924pt>
 File: hungdan_notes_1.png Graphic file (type png)
 
 <use hungdan_notes_1.png>
-Package pdftex.def Info: hungdan_notes_1.png used on input line 211.
+Package pdftex.def Info: hungdan_notes_1.png used on input line 212.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
  <wish_notes_1.png, id=28, 586.8324pt x 442.2924pt>
 File: wish_notes_1.png Graphic file (type png)
 
 <use wish_notes_1.png>
-Package pdftex.def Info: wish_notes_1.png used on input line 215.
+Package pdftex.def Info: wish_notes_1.png used on input line 216.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
  <rach_notes_1.png, id=29, 586.8324pt x 442.2924pt>
 File: rach_notes_1.png Graphic file (type png)
 
 <use rach_notes_1.png>
-Package pdftex.def Info: rach_notes_1.png used on input line 219.
+Package pdftex.def Info: rach_notes_1.png used on input line 220.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
  <comf_notes_1.png, id=30, 586.8324pt x 442.2924pt>
 File: comf_notes_1.png Graphic file (type png)
 
 <use comf_notes_1.png>
-Package pdftex.def Info: comf_notes_1.png used on input line 223.
+Package pdftex.def Info: comf_notes_1.png used on input line 224.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
  <hungdan_notes_2.png, id=31, 586.8324pt x 442.2924pt>
 File: hungdan_notes_2.png Graphic file (type png)
 
 <use hungdan_notes_2.png>
-Package pdftex.def Info: hungdan_notes_2.png used on input line 234.
+Package pdftex.def Info: hungdan_notes_2.png used on input line 235.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
  <wish_notes_2.png, id=32, 586.8324pt x 442.2924pt>
 File: wish_notes_2.png Graphic file (type png)
 
 <use wish_notes_2.png>
-Package pdftex.def Info: wish_notes_2.png used on input line 238.
+Package pdftex.def Info: wish_notes_2.png used on input line 239.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
  <rach_notes_2.png, id=33, 586.8324pt x 442.2924pt>
 File: rach_notes_2.png Graphic file (type png)
 
 <use rach_notes_2.png>
-Package pdftex.def Info: rach_notes_2.png used on input line 242.
+Package pdftex.def Info: rach_notes_2.png used on input line 243.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
  <comf_notes_2.png, id=34, 586.8324pt x 442.2924pt>
 File: comf_notes_2.png Graphic file (type png)
 
 <use comf_notes_2.png>
-Package pdftex.def Info: comf_notes_2.png used on input line 246.
+Package pdftex.def Info: comf_notes_2.png used on input line 247.
 (pdftex.def)             Requested size: 158.99156pt x 119.82547pt.
 
-Overfull \hbox (28.6612pt too wide) in paragraph at lines 266--267
+Overfull \hbox (28.6612pt too wide) in paragraph at lines 267--268
 \T1/cmtt/m/n/10 / / www . uvm . edu / ~pdodds / teaching / courses / 2009-[]08U
 VM-[]300 / docs / others / 1955 / simon1955 .
  []
 
-[5] [6 <./hungdan_notes_1.png> <./wish_notes_1.png> <./rach_notes_1.png> <./com
-f_notes_1.png>] [7 <./hungdan_notes_2.png> <./wish_notes_2.png> <./rach_notes_2
-.png> <./comf_notes_2.png>] [8] (./book.aux) ) 
+
+Underfull \vbox (badness 1320) has occurred while \output is active []
+
+ [5]
+[6 <./hungdan_notes_1.png> <./wish_notes_1.png> <./rach_notes_1.png> <./comf_no
+tes_1.png>] [7 <./hungdan_notes_2.png> <./wish_notes_2.png> <./rach_notes_2.png
+> <./comf_notes_2.png>]
+Overfull \hbox (2.06032pt too wide) in paragraph at lines 276--277
+\T1/ppl/b/n/10 Exercise 15.10. \T1/ppl/m/it/10 Find ex-am-ples of white noise, 
+pink noise, and brown noise on the In-ter-net. (YouTube
+ []
+
+[8] (./book.aux) ) 
 Here is how much of TeX's memory you used:
- 4744 strings out of 493485
- 64895 string characters out of 3143526
- 120831 words of memory out of 3000000
- 7911 multiletter control sequences out of 15000+200000
+ 4745 strings out of 493485
+ 64915 string characters out of 3143526
+ 120852 words of memory out of 3000000
+ 7912 multiletter control sequences out of 15000+200000
  30981 words of font info for 69 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,7n,43p,1243b,295s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips
-/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t
-s1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/ty
-pe1/public/cm-super/sfit1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/
-sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on book.pdf (8 pages, 316591 bytes).
+ 38i,7n,43p,1258b,295s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/
+usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texlive/t
+exmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfit1000
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pala
+tino/uplri8a.pfb>
+Output written on book.pdf (8 pages, 317657 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
