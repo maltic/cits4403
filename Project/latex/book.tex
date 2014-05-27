@@ -133,7 +133,7 @@ Research the MIDI format. How hard do you think it would be to write your own pa
 \end{exercise}
 
 \begin{exercise}
-Attempt to write a script that outputs the number of distinct notes in a MIDI file. My solution is available at URL.
+Attempt to write a script that outputs the number of distinct notes in a MIDI file. My solution is available at \url{thinkcomplex.com/NoteCounter.py}.
 \end{exercise}
 
 
@@ -160,7 +160,7 @@ The first line reads and parses the MIDI into a pattern. The following two loops
 
 
 \subsection{Consecutive Notes}
-A more versatile way of using note frequencies is to consider sequences of consecutive notes. This is achieved by sorting all the notes in the MIDI file by order of appearance, then running a sliding window of fixed size over the notes. This results in a much larger corpus of possible words. For example, a window size of two will have $128^2$ possible words, every combination of two MIDI notes. Having a window size of one is the same as the approach described in Section \ref{sec:note_group}. Having too large a window size can be problematical, as it often results in having many words with very low frequency. I found that a window size of two was typically the best. Very long pieces of music may work with larger window sizes, however.
+A more versatile way of using note frequencies is to consider sequences of consecutive notes. This is achieved by sorting all the notes in the MIDI file by order of appearance, then running a sliding window of fixed size over the notes. This results in a much larger corpus of possible words. For example, a window size of two will have $128^2$ possible words, every combination of two MIDI notes. Having a window size of one is the same as the approach described in Section \ref{sec:note_group}. Having too large a window size can be problematic, as it often results in having many words with very low frequency. I found that a window size of two was typically the best. Very long pieces of music may work with larger window sizes, however.
 
 \begin{exercise}
 Implement the sliding window note analysis technique. Note On objects have a member called \texttt{tick}, which is the number of ticks before they appear in the MIDI song. This can be used for sorting. My solution can be found at \url{thinkcomplex.com/SlidingWindow.py}.
@@ -189,14 +189,14 @@ Can you think of any problems with this method? Would using a sliding window ove
 
 
 \subsection{Note Intervals}
-Thus far, all the word interpretations I have described deal with events directly. As an alternative, we may wish to take a more high level approach. For every MIDI note frequency that appears in a MIDI pattern, the intervals between specific notes could be recorded. For example, if the note code 60 appears at tick 110, then later at 120, then again at 135, we would record intervals of 10 and 15. Such intervals could be collected for every note in the MIDI pattern, and collated into one list. We can then calculate the rank and frequency of note intervals for further analysis.
+Thus far, all the word interpretations I have described deal with events directly. As an alternative, we may wish to take a more high level approach. The intervals between specific notes could be recorded. For example, if the note code 60 appears at tick 110, then later at 120, then again at 135, we would record intervals of 10 and 15. Such intervals could be collected for every note in the MIDI pattern, and collated into one list. We can then calculate the rank and frequency of note intervals for further analysis.
 
 \begin{exercise}
 Implement the \texttt{get\_noteintervals} function. Modifying the \texttt{get\_notes} function might make this easier. Don't forget to sort all MIDI events by tick first. (Hint: use a dictionary to store the last occurrence of every note code.)
 \end{exercise}
 
 \begin{exercise}
-Can you think of any other aspects of music that might reasonably conform to Zipf's law? If you can think of any, implement a getter function like those present in this section.
+Can you think of any other aspects of music that might reasonably conform to Zipf's law? If you can think of any, implement a getter function like those presented in this section.
 \end{exercise}
 
 
@@ -204,7 +204,7 @@ Can you think of any other aspects of music that might reasonably conform to Zip
 
 \section{Scale-free Music}
 \label{sec:scalefreemusic}
-In Chapter 5, we created a number of useful classes and functions for dealing  power law distributions. A copy of these files will be helpful in analysing the words described in the previous section. Using the \texttt{Pmf.py} and \texttt{Zipf.py} modules, a histogram can be created for ranks and frequencies. From here, we can plot a log-log graph of ranks versus frequency. If the graph looks somewhat like a straight line with slope $\approx -1$ then this confirms that a rank-frequency function is Zipfian. For analysis I chose `Wish You Were Here' and `Comfortably Numb' by Pink Floyd, Rachmaninov's `Allegro Ma Non Tanto' (No. 3 in D minor, Op. 30), and Brahms's `Hungarian Dance' No. 1. First, let us examine a simple distribution of single note frequencies.
+In Chapter 5, we created a number of useful classes and functions for dealing with power law distributions. A copy of these files will be helpful in analysing the words described in the previous section. Using the \texttt{Pmf.py} and \texttt{Zipf.py} modules, a histogram can be created for word frequency. From here, we can plot a log-log graph of ranks versus frequency. If the graph looks somewhat like a straight line with slope $\approx -1$ then this confirms that a rank-frequency function is Zipfian. For analysis I chose `Wish You Were Here' and `Comfortably Numb' by Pink Floyd, Rachmaninov's `Allegro Ma Non Tanto' (No. 3 in D minor, Op. 30), and Brahms's `Hungarian Dance' No. 1. First, let us examine a simple distribution of single note frequencies.
 
 
 \begin{figure}[!htb]
